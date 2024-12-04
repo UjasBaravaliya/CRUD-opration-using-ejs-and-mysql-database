@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User data</title>
+</head>
+
+<body>
+  <h1>User Lists</h1>
+  <table border="1" width="100%">
+    <tr>
+      <th>Index</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Action</th>
+    </tr>
+
+    <% if(student.length>0){ %>
+      <% for(var i=0; i < student.length; i++) { %>
+        <tr>
+          <td>
+            <%= student[i].id %>
+          </td>
+          <td>
+            <%= student[i].name %>
+          </td>
+          <td>
+            <%= student[i].email %>
+          </td>
+          <td>
+            <%= student[i].password %>
+          </td>
+          <td>
+            <a href="/updatedata?id=<%= student[i].id %>">Update</a>
+            <a href="/deletedata?id=<%= student[i].id %>">Delete</a>
+          </td>
+        </tr>
+        <% } %>
+          <% }else{ %>
+            <h1>Data not found</h1>
+            <% } %>
+  </table>
+</body>
+
+</html>

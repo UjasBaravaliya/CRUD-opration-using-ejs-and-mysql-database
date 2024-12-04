@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>update page</title>
+</head>
+
+<body>
+  <h1>Update User</h1>
+  <form action="" method="post">
+    <input type="hidden" name="id" value="<%= student[0].id %>">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= student[0].name %>" required>
+    <br>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" value="<%= student[0].email %>" required>
+    <br>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" value="<%= student[0].password %>" required>
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>
+
+<!-- <h1>Student Register</h1>
+
+<form action="" method="post">
+  <input type="hidden" name="id"  value="<%= student[0].id %>">
+  <input type="text" name="name" value="<%= student[0].name %>" placeholder="Enter Your name" required><br><br>
+  <input type="text" name="email" value="<%= student[0].email %>" placeholder="Enter Your Email" required><br><br>
+  <input type="text" name="password" value="<%= student[0].password %> " placeholder="Enter Your Password"
+    required><br><br>
+  <input type="submit" value="Submit">
+
+</form> -->
